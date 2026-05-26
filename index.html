@@ -20,6 +20,32 @@ body {
     text-align: center;
 }
 
+/* NAVIGATION */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(5,7,10,0.92);
+    padding: 18px 0;
+    z-index: 999;
+    backdrop-filter: blur(8px);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #58a6ff;
+}
+
+/* HERO */
+
 header {
     position: relative;
     height: 100vh;
@@ -28,29 +54,70 @@ header {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    padding: 0 20px;
 }
 
 header::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)),
         url('IMG_5198.png') center/cover no-repeat;
     z-index: -1;
 }
 
+.hero-logo {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
 h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 10px;
 }
 
+.hero-text {
+    max-width: 700px;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+/* BUTTONS */
+
+.button-group {
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 16px 32px;
+    background: white;
+    color: #0b3d91;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* SECTIONS */
+
+section {
+    padding: 90px 20px;
+}
+
 h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
+    margin-bottom: 40px;
+    font-size: 2.4rem;
 }
 
 h3 {
@@ -58,29 +125,11 @@ h3 {
 }
 
 p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.15rem;
+    line-height: 1.7;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 30px;
-    background: white;
-    color: #0b3d91;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.button:hover {
-    opacity: 0.9;
-}
-
-section {
-    padding: 70px 20px;
-}
+/* SERVICES */
 
 .services {
     display: flex;
@@ -103,20 +152,38 @@ section {
     transform: translateY(-5px);
 }
 
+/* CONTACT */
+
+.contact-links p {
+    margin: 15px 0;
+}
+
+/* FOOTER */
+
 footer {
-    padding: 30px;
+    padding: 35px;
     background: #05070a;
 }
 
-a {
-    color: #58a6ff;
-    text-decoration: none;
+footer p {
+    margin: 0;
 }
+
+/* MOBILE */
 
 @media (max-width: 768px) {
 
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+    }
+
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 
     p {
@@ -134,13 +201,49 @@ a {
 
 <body>
 
+<!-- NAVIGATION -->
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="estimate.html">Free Estimate</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<!-- HERO -->
+
 <header>
 
-    <a class="button" href="mailto:cleaning@elevatepressure.com">
-        Email For Free Estimate
-    </a>
+    <div class="hero-text">
+
+        <h1>Elevate Pressure Cleaning</h1>
+
+        <p>
+            <strong>Clean Surfaces. Elevated Results.</strong>
+        </p>
+
+        <p>
+            Veteran-Owned Exterior Cleaning Serving Central Florida
+        </p>
+
+        <div class="button-group">
+
+            <a class="button" href="estimate.html">
+                Request Free Estimate
+            </a>
+
+            <a class="button" href="tel:+14075040782">
+                Call Now
+            </a>
+
+        </div>
+
+    </div>
 
 </header>
+
+<!-- SERVICES -->
 
 <section>
 
@@ -149,24 +252,30 @@ a {
     <div class="services">
 
         <div class="card">
+
             <h3>Pressure Washing</h3>
 
             <p>
                 Driveways • Patios • Paths • Decks • Pool Decks
             </p>
+
         </div>
 
         <div class="card">
+
             <h3>Soft Washing</h3>
 
             <p>
                 Houses • Cars • Lanais • Pool Enclosures • Windows
             </p>
+
         </div>
 
     </div>
 
 </section>
+
+<!-- WHY CHOOSE US -->
 
 <section>
 
@@ -182,39 +291,47 @@ a {
 
 </section>
 
+<!-- CONTACT -->
+
 <section>
 
     <h2>Contact Us</h2>
 
-     <p>
-        Email:
-        <a href="mailto:cleaning@elevatepressure.com">
-            cleaning@elevatepressure.com
-        </a>
-    </p>   
+    <div class="contact-links">
 
-    <p>
-        Instagram:
-        <a href="https://instagram.com/elev8pressurecleaning" target="_blank">
-            @elev8pressurecleaning
-        </a>
-    </p>
+        <p>
+            Email:
+            <a href="mailto:cleaning@elevatepressure.com">
+                cleaning@elevatepressure.com
+            </a>
+        </p>
 
-    <p>
-        Facebook:
-        <a href="https://facebook.com/elev8pressurecleaning" target="_blank">
-            @elev8pressurecleaning
-        </a>
-    </p>
+        <p>
+            Instagram:
+            <a href="https://instagram.com/elev8pressurecleaning" target="_blank">
+                @elev8pressurecleaning
+            </a>
+        </p>
 
-    <p>
-        Phone:
-        <a href="tel:+14075040782">
-            407-504-0782
-        </a>
-    </p>
+        <p>
+            Facebook:
+            <a href="https://facebook.com/elev8pressurecleaning" target="_blank">
+                @elev8pressurecleaning
+            </a>
+        </p>
+
+        <p>
+            Phone:
+            <a href="tel:+14075040782">
+                407-504-0782
+            </a>
+        </p>
+
+    </div>
 
 </section>
+
+<!-- FOOTER -->
 
 <footer>
     <p>© 2026 Elevate Pressure Cleaning</p>
