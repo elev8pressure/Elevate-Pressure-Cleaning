@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Request Free Estimate | Elevate Pressure Cleaning</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    padding: 22px 0;
+    background: #05070a;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #58a6ff;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+form {
+    max-width: 650px;
+    margin: 30px auto;
+    background: #161b22;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 130px;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 15px;
+    background: white;
+    color: #0b3d91;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+footer {
+    padding: 30px;
+    background: #05070a;
+}
+
+@media (max-width: 768px) {
+    nav a {
+        margin: 0 8px;
+        font-size: 0.95rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="estimate.html">Free Estimate</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section>
+
+    <h1>Request a Free Estimate</h1>
+
+    <p>
+        Fill out the form below and Elevate Pressure Cleaning will follow up as soon as possible.
+    </p>
+
+    <form action="https://formsubmit.co/cleaning@elevatepressure.com" method="POST">
+
+        <input type="hidden" name="_subject" value="New Estimate Request - Elevate Pressure Cleaning">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="text" name="Name" placeholder="Full Name" required>
+
+        <input type="tel" name="Phone" placeholder="Phone Number" required>
+
+        <input type="email" name="Email" placeholder="Email Address" required>
+
+        <input type="text" name="Service Address" placeholder="Service Address / City" required>
+
+        <select name="Service Needed" required>
+            <option value="">Select Service Needed</option>
+            <option value="Pressure Washing">Pressure Washing</option>
+            <option value="Soft Washing">Soft Washing</option>
+            <option value="House Wash">House Wash</option>
+            <option value="Driveway Cleaning">Driveway Cleaning</option>
+            <option value="Walkways / Sidewalks">Walkways / Sidewalks</option>
+            <option value="Patio / Pool Deck">Patio / Pool Deck</option>
+            <option value="Multiple Services">Multiple Services</option>
+        </select>
+
+        <select name="Preferred Contact Method">
+            <option value="">Preferred Contact Method</option>
+            <option value="Call">Call</option>
+            <option value="Text">Text</option>
+            <option value="Email">Email</option>
+        </select>
+
+        <textarea name="Notes" placeholder="Tell us what you need cleaned. You can include surface type, size, condition, gate access, water access, or anything important."></textarea>
+
+        <button type="submit">Submit Estimate Request</button>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 Elevate Pressure Cleaning</p>
+</footer>
+
+</body>
+</html>
